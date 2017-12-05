@@ -8,7 +8,7 @@ SPHINXPROJ    = Ubuntutouchapidocs
 SOURCEDIR     = .
 BUILDDIR      = _build
 
-# List of sources to clobber when pushing to gh-pages branch
+# List of sources to use then clobber when pushing to GitHub Pages
 GH_PAGES_SOURCES = sdk conf.py Makefile README.md requirements.txt
 
 # Put it first so that "make" without argument is like "make help".
@@ -28,7 +28,7 @@ gh-pages:
     git checkout master $(GH_PAGES_SOURCES)
     git reset HEAD
     make html
-    mv -fv build/html/* ./
-    rm -rf $(GH_PAGES_SOURCES) build
+    mv -fv _build/html/* ./
+    rm -rf $(GH_PAGES_SOURCES) _build
     git add -A
-    git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+    git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`"
