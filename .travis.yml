@@ -8,7 +8,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - travis-wait 30 sphinx-build -a -j8 . _build
+  - travis_wait 30 sphinx-build -a -j8 . _build
 
 deploy:
   provider: pages
