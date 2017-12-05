@@ -19,8 +19,6 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import recommonmark
-from recommonmark.transform import AutoStructify
 
 
 # -- General configuration ------------------------------------------------
@@ -35,12 +33,6 @@ from recommonmark.transform import AutoStructify
 extensions = [
     'sphinx.ext.todo'
 ]
-
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -169,9 +161,3 @@ texinfo_documents = [
 ]
 
 github_doc_root = ''
-def setup(app):
-    app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: github_doc_root + url,
-            "enable_auto_doc_ref": False,
-            }, True)
-    app.add_transform(AutoStructify)
