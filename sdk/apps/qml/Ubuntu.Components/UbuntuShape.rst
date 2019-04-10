@@ -68,6 +68,7 @@ This property defines the graphical style of the :ref:`UbuntuShape <sdk_ubuntu_c
 
 -  **UbuntuShape.Flat** - no effects applied
 -  **UbuntuShape.Inset** - inner shadow slightly moved downwards and bevelled bottom
+-  **UbuntuShape.DropShadow** - outer shadow
 
 .. _sdk_ubuntu_components_ubuntushape_backgroundColor:
 
