@@ -37,7 +37,7 @@ Creates a ContentStore object for the given ContentPeer.
 
 - ``onSuccess`` **<Function(Array of ContentItem>**
 
-   )} called when the transfer has been a success and items are available
+   called when the transfer has been a success and items are available
 
 **getPeers**\ (``filters, callback``)
 Creates a ContentPeer object for the given source type.
